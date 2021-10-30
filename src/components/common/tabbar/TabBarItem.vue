@@ -7,7 +7,7 @@
     <!--<slot v-if="isActive" name="item-icon"></slot>-->
     <div v-else><slot name="item-icon-active"></slot></div>
     <div :style="activeStyle"><slot name="item-text"></slot></div>
-<!--    <div :class="{active: isActive}"><slot name="item-text"></slot></div>-->
+<!--    <div :class="{active: isActive}"><slot  name="item-text"></slot></div>-->
   </div>
 </template>
 
@@ -23,7 +23,7 @@
     },
     data() {
       return {
-        // isActive: true
+        // isActive: false
       }
     },
     computed: {
@@ -46,6 +46,7 @@
   .tab-bar-item{
     flex: 1;
     text-align: center;
+    padding-top: 4px;
     /*默认49px，移动端的tab-bar*/
     height: 49px;
     font-size: 14px;

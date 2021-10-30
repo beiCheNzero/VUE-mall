@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive exclude="Detail"><!-- exclude='Detail'排除在外，不保持活跃，避免进去详情页获取同一个数据 -->
+      <router-view/>
+    </keep-alive>
     <main-tab-bar></main-tab-bar>
   </div>
 </template>
@@ -10,7 +12,7 @@
 
   export default {
     name: 'App',
-    components: {
+    components:{
       MainTabBar
     }
   }
